@@ -1,1 +1,1 @@
-# XcodeSnippets
+# Xcode Code Snippets

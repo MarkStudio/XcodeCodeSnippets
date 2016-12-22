@@ -11,7 +11,7 @@ cd /Users/Mark/XcodeCodeSnippets
 ```
 
 # shortcut as below:  
-# mksDefineDebug 
+## mksDefineDebug 
 
 ```
 #ifdef DEBUG
@@ -23,13 +23,13 @@ cd /Users/Mark/XcodeCodeSnippets
 #endif
 ```
 
-# mksMark
+## mksMark
 
 ```
 #pragma mark - <#comment#>
 ```
 
-# mksInterface
+## mksInterface
 
 ```
 @interface <#name#> ()
@@ -37,7 +37,7 @@ cd /Users/Mark/XcodeCodeSnippets
 @end
 ```
 
-# mksPrivateInterface
+## mksPrivateInterface
 
 ```
 @interface <#class name#> ()
@@ -47,32 +47,32 @@ cd /Users/Mark/XcodeCodeSnippets
 @end
 ```
 
-# mksAssignProperty
+## mksAssignProperty
 
 ```
 @property (nonatomic, assign) <#type#> <#name#>;
 ```
 
-# mksStrongProperty 
+## mksStrongProperty 
 
 ```
 @property (nonatomic, strong) <#type#> *<#name#>;
 ```
 
 
-# mksWeakProperty
+## mksWeakProperty
 
 ```
 @property (nonatomic, weak) <#type#> <#name#>;
 ```
 
-# mksSynthesize
+## mksSynthesize
 ```
 @synthesize <#property#> = _propertyIvar;
 ```
 
 
-# setAssociated
+## setAssociated
 ```
 // should has:
 // static char xxxKey;
@@ -82,7 +82,7 @@ objc_setAssociatedObject(self,
                         <#objc_AssociationPolicy#>);
 ```
 
-# getAssociated
+## getAssociated
 
 ```
 // should has:
@@ -90,7 +90,7 @@ objc_setAssociatedObject(self,
 objc_getAssociatedObject(self, &<#xxxKey#>);
 ```
 
-# mksInitObject
+## mksInitObject
 
 ```
 - (id)init
@@ -104,7 +104,7 @@ objc_getAssociatedObject(self, &<#xxxKey#>);
 }
 ```
 
-# mksSharedInstance
+## mksSharedInstance
 ```
 + (instancetype)sharedInstance
 {
@@ -118,7 +118,7 @@ objc_getAssociatedObject(self, &<#xxxKey#>);
 }
 ```
 
-# mksNotification
+## mksNotification
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self
@@ -141,7 +141,7 @@ objc_getAssociatedObject(self, &<#xxxKey#>);
     }
 ```
 
-# mksRegisterNibCell
+## mksRegisterNibCell
 ```
 #define ReuseIdentifier @"<#reuseIdentifier#>"
     UINib *nib = [UINib nibWithNibName:<#nibName#>
@@ -149,7 +149,7 @@ objc_getAssociatedObject(self, &<#xxxKey#>);
     [_tableView registerNib:nib forCellReuseIdentifier:ReuseIdentifier];
 ```
 
-# mksTimer
+## mksTimer
 ```
 // 创建
 self.<#var#> = [NSTimer scheduledTimerWithTimeInterval:1.5
@@ -161,7 +161,7 @@ self.<#var#> = [NSTimer scheduledTimerWithTimeInterval:1.5
 [self.<#var#> invalidate];
 ```
 
-# mksHideKeyboard
+## mksHideKeyboard
 
 ```
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -171,7 +171,7 @@ self.<#var#> = [NSTimer scheduledTimerWithTimeInterval:1.5
 }
 ```
 
-# swizzling
+## swizzling
 ```
 // should be in [NSObject load] method
 static dispatch_once_t onceToken;

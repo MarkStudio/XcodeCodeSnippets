@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mksDefineDebug</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#ifdef DEBUG
+    #define MKSLog(...) NSLog(__VA_ARGS__)
+    #define MKSMethod() NSLog(@"%s", __func__)
+#else
+    #define MKSLog(...)
+    #define MKSMethod()
+#endif</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>20888CE5-13E0-4B11-9BE3-4EEEB93DB277</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>DEBUG method Define</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>DEBUG method Define</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

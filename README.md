@@ -2,6 +2,14 @@
 
 Some code snippets be used in Xcode.
 
+# Usage
+```
+check out the project using: git clone https://github.com/MarkStudio/XcodeCodeSnippets.git
+cd /Users/Mark/XcodeCodeSnippets
+./setup_snippets.sh
+
+```
+
 shortcut as below:  
 # mksDefineDebug 
 

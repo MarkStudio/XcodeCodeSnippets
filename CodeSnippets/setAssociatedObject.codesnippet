@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>setAssociated</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    // should has:
+    // static char xxxKey
+    objc_setAssociatedObject(self,
+                             &amp;&lt;#xxxKey#&gt;,
+                             &lt;#property#&gt;,
+                             &lt;#objc_AssociationPolicy#&gt;);
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3F5F9ECE-2E2F-4E73-A711-2E92937BD405</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>set associated object</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>setAssociatedObject</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mksNotification</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeExpression</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    [[NSNotificationCenter defaultCenter] addObserver:self
+                                         selector:@selector(&lt;#handle#&gt;)
+                                             name:&lt;#name#&gt;
+                                           object:nil];
+
+  // post notification
+    [[NSNotificationCenter defaultCenter] postNotificationName:&lt;#name#&gt;
+                                                    object:self
+                                                  userInfo:&lt;#userInfo#&gt;];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                name:&lt;#name#&gt;
+                                              object:&lt;#(nullable id)#&gt;];
+#warning should remove in observer
+- (void)&lt;#notificationHandle#&gt;:(NSNotification *)noti
+{
+    &lt;#handle block#&gt;
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>84587A91-678A-4727-9EBA-6F9D327EF485</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Init Notification Observer</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Init Notification Observer</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

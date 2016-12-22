@@ -10,7 +10,7 @@ cd /Users/Mark/XcodeCodeSnippets
 
 ```
 
-shortcut as below:  
+# shortcut as below:  
 # mksDefineDebug 
 
 ```

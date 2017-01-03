@@ -1,6 +1,7 @@
 # Xcode Code Snippets
 
-Some code snippets be used in Xcode.
+Some code snippets be used in Xcode. 
+Code Snippets Path: ~/Library/Developer/Xcode/UserData/CodeSnippets下；
 
 # Usage
 ```

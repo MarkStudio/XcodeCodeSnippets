@@ -207,4 +207,50 @@ dispatch_once(&onceToken, ^{
 
 ```
 
+## UIView Transition
+```
+// add transition in UIView
+UIViewAnimationTransition transition = <#transitionType#>;
+[UIView beginAnimations:@"transition" context:nil];
+[UIView setAnimationDuration:<#duration#>];
+[UIView setAnimationCurve:<#curveType#>];
+[UIView setAnimationRepeatAutoreverses:NO];
+[UIView setAnimationTransition:transition forView:<#animationView#> cache:YES];
+<#animation view change code#>
+//[self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
+[UIView commitAnimations];
+
+```
+
+## CATransition
+```
+CATransition *transition = [CATransition animation];
+[transition setDelegate:<#CAAnimationDelegate#>];
+transition.timingFunction = UIViewAnimationCurveEaseInOut;
+[transition setFillMode:kCAFillModeForwards];
+[transition setEndProgress:1.0];
+[transition setDuration:1.0*transition.endProgress];
+[transition setRemovedOnCompletion:NO];
+// "cube","suckEffect","oglFlip",
+// "rippleEffect","pageCurl","pageUnCurl",
+// "cameraIrisHollowOpen","cameraIrisHollowClose"
+[transition setType:<#type#>];
+[self.view.layer addAnimation:transition forKey:@"animation"];
+<#animation code here#>
+//[self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
+
+```
+
+## CATransition Simple
+```
+CATransition *transition = [CATransition animation];
+[transition setDuration:1.0];
+transition.timingFunction = UIViewAnimationCurveEaseInOut;
+[transition setFillMode:kCAFillModeForwards];
+NSString *strSubType = kCATransitionFromTop;
+[transition setType:kCATransitionPush];
+[self.view.layer addAnimation:transition forKey:@"animation"];
+
+```
+
 Refrence: https://github.com/tangqiaoboy/Xcode_tool

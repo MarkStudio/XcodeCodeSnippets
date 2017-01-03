@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mksAnimationCATransition</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>CATransition *transition = [CATransition animation];
+[transition setDelegate:&lt;#CAAnimationDelegate#&gt;];
+transition.timingFunction = UIViewAnimationCurveEaseInOut;
+[transition setFillMode:kCAFillModeForwards];
+[transition setEndProgress:1.0];
+[transition setDuration:1.0*transition.endProgress];
+[transition setRemovedOnCompletion:NO];
+// "cube","suckEffect","oglFlip","rippleEffect",
+// "pageCurl","pageUnCurl","cameraIrisHollowOpen",
+// "cameraIrisHollowClose"
+[transition setType:&lt;#type#&gt;];
+[self.view.layer addAnimation:transition forKey:@"animation"];
+&lt;#animation code here#&gt;
+//[self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:0];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>920AC067-D859-45F8-A3BB-55D41DEADB0A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>UIView Animation CATransition </string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIView Animation CATransition </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

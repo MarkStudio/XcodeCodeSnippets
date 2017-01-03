@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mksAnimationViewTransition</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIViewAnimationTransition transition = &lt;#transitionType#&gt;;
+[UIView beginAnimations:@"transition" context:nil];
+[UIView setAnimationDuration:&lt;#duration#&gt;];
+[UIView setAnimationCurve:&lt;#curveType#&gt;];
+[UIView setAnimationRepeatAutoreverses:NO];
+[UIView setAnimationTransition:transition
+                       forView:&lt;#animationView#&gt;
+                         cache:YES];
+&lt;#animation view change code#&gt;
+//[self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
+[UIView commitAnimations];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B2FB6C15-F15A-4379-AB7A-1F95D786565D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>UIView Animation Transition</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIView Animation Transition</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

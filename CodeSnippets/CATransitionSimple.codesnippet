@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mksAnimationCATransitionSimple</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>CATransition *transition = [CATransition animation];
+[transition setDuration:1.0];
+transition.timingFunction = UIViewAnimationCurveEaseInOut;
+[transition setFillMode:kCAFillModeForwards];
+NSString *strSubType = kCATransitionFromTop;
+[transition setType:kCATransitionPush];
+[self.view.layer addAnimation:transition forKey:@"animation"];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F8B533AA-D3B1-42F2-8275-0EEE787BC17F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>UIView Animation CATransitionSimple</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIView Animation CATransitionSimple</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

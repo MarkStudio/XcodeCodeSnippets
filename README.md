@@ -253,4 +253,68 @@ NSString *strSubType = kCATransitionFromTop;
 
 ```
 
+## Base Animation Alpha
+```
+CABasicAnimation *alphaAnim = [CABasicAnimation animationWithKeyPath:@"alpha"];
+[alphaAnim setFromValue:[NSNumber numberWithFloat:<#alphaFrom#>]];
+[alphaAnim setToValue:[NSNumber numberWithFloat:<#alphaTo#>]];
+[alphaAnim setRemovedOnCompletion:YES];
+[<#view#>.layer addAnimation:alphaAnim forKey:<#key#>];
+
+```
+
+## Base Animation Move
+```
+CABasicAnimation *moveAnim = [CABasicAnimation animationWithKeyPath:@"position"];
+[moveAnim setFromValue:[NSValue valueWithCGPoint:<#fromPoint#>]];
+[moveAnim setToValue:[NSValue valueWithCGPoint:<#toPoint#>]];
+[moveAnim setRemovedOnCompletion:YES];
+[<#view#>.layer addAnimation:moveAnim forKey:<#key#>];
+
+```
+
+## Base Animation Scale
+```
+CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform"];
+[scaleAnim setFromValue:[NSValue valueWithCATransform3D:CATransform3DIdentity]];
+// x，y轴缩小到0.1,Z 轴不变
+[scaleAnim setToValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1, 0.1, 1.0)]];
+[scaleAnim setRemovedOnCompletion:YES];
+[<#view#>.layer addAnimation:scaleAnim forKey:<#key#>];
+
+```
+
+## Keyframe Animation Bezier
+```
+UIBezierPath *movePath = [UIBezierPath bezierPath];
+[movePath moveFrPoint:<#fromPoint#>];
+[movePath addQuadCurveToPoint:<#toPoint#> controlPoint:<#controlPoint#>];
+
+CAKeyframeAnimation *keyframeAnim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+keyframeAnim.path = movePath.CGPath;
+keyframeAnim.removedOnCompletion = YES;
+[<#view#>.layer addAnimation:keyframeAnim forKey:<#key#>];
+
+```
+
+## Animation Group
+```
+CABasicAnimation *moveAnim = [CABasicAnimation animationWithKeyPath:@"position"];
+moveAnim.toValue = [NSValue valueWithCGPoint:<#toPoint#>];
+
+
+CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform"];
+scaleAnim.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+//x，y轴缩小到0.1,Z 轴不变
+scaleAnim.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1, 0.1, 1.0)];
+scaleAnim.removedOnCompletion = YES;
+
+CAAnimationGroup *animGroup = [CAAnimationGroup animation];
+animGroup.animations = [NSArray arrayWithObjects:moveAnim, scaleAnim, nil];
+animGroup.duration = 1;
+
+[<#view#>.layer addAnimation:animGroup forKey:nil];
+
+```
+
 Refrence: https://github.com/tangqiaoboy/Xcode_tool

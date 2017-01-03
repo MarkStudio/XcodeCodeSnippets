@@ -3,30 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mksAnimationCATransitionSimple</string>
+	<string>mksBaseAnimationScale</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>CATransition *transition = [CATransition animation];
-[transition setDuration:1.0];
-transition.timingFunction = UIViewAnimationCurveEaseInOut;
-[transition setFillMode:kCAFillModeForwards];
-NSString *strSubType = kCATransitionFromTop;
-[transition setType:kCATransitionPush];
-[self.view.layer addAnimation:transition forKey:@"animation"];</string>
+	<string>CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform"];
+[scaleAnim setFromValue:[NSValue valueWithCATransform3D:CATransform3DIdentity]];
+// x，y轴缩小到0.1,Z 轴不变
+[scaleAnim setToValue:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1, 0.1, 1.0)]];
+[scaleAnim setRemovedOnCompletion:YES];
+[&lt;#view#&gt;.layer addAnimation:scaleAnim forKey:&lt;#key#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F8B533AA-D3B1-42F2-8275-0EEE787BC17F</string>
+	<string>EBB1D2A0-D138-4B9D-B79D-C5FF1382810B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>UIView Animation CATransitionSimple</string>
+	<string>Base Animation Scale</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIView Animation CATransitionSimple</string>
+	<string>Base Animation Scale</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

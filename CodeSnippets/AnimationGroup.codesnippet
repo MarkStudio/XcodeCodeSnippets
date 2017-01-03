@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mksAnimationGroup</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>CABasicAnimation *moveAnim = [CABasicAnimation animationWithKeyPath:@"position"];
+moveAnim.toValue = [NSValue valueWithCGPoint:&lt;#toPoint#&gt;];
+    
+    
+CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform"];
+scaleAnim.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+    //x，y轴缩小到0.1,Z 轴不变
+scaleAnim.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1, 0.1, 1.0)];
+scaleAnim.removedOnCompletion = YES;
+    
+CAAnimationGroup *animGroup = [CAAnimationGroup animation];
+animGroup.animations = [NSArray arrayWithObjects:moveAnim, scaleAnim, nil];
+animGroup.duration = 1;
+
+[&lt;#view#&gt;.layer addAnimation:animGroup forKey:nil];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2B1EE297-4DE0-4E4C-9A45-CD975155E824</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Animation Group</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Animation Group</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

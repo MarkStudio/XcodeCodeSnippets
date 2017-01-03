@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mksKeyframeAnimationBezier</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIBezierPath *movePath = [UIBezierPath bezierPath];
+[movePath moveFrPoint:&lt;#fromPoint#&gt;];
+[movePath addQuadCurveToPoint:&lt;#toPoint#&gt; controlPoint:&lt;#controlPoint#&gt;];
+    
+CAKeyframeAnimation *keyframeAnim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+keyframeAnim.path = movePath.CGPath;
+keyframeAnim.removedOnCompletion = YES;
+[&lt;#view#&gt;.layer addAnimation:keyframeAnim forKey:&lt;#key#&gt;];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E68EF1F8-4E9A-4EE9-A017-6349FFC4DF41</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Keyframe Animation Bezier</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Keyframe Animation Bezier</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

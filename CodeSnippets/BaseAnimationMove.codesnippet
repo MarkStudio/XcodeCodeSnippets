@@ -3,30 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mksAnimationCATransitionSimple</string>
+	<string>mksBaseAnimationMove</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>CATransition *transition = [CATransition animation];
-[transition setDuration:1.0];
-transition.timingFunction = UIViewAnimationCurveEaseInOut;
-[transition setFillMode:kCAFillModeForwards];
-NSString *strSubType = kCATransitionFromTop;
-[transition setType:kCATransitionPush];
-[self.view.layer addAnimation:transition forKey:@"animation"];</string>
+	<string>CABasicAnimation *moveAnim = [CABasicAnimation animationWithKeyPath:@"position"];
+[moveAnim setFromValue:[NSValue valueWithCGPoint:&lt;#fromPoint#&gt;]];
+[moveAnim setToValue:[NSValue valueWithCGPoint:&lt;#toPoint#&gt;]];
+[moveAnim setRemovedOnCompletion:YES];
+[&lt;#view#&gt;.layer addAnimation:moveAnim forKey:&lt;#key#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F8B533AA-D3B1-42F2-8275-0EEE787BC17F</string>
+	<string>B1D69D49-095A-45EB-8260-DDB8B4FF41D6</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>UIView Animation CATransitionSimple</string>
+	<string>Base Animation Move</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIView Animation CATransitionSimple</string>
+	<string>Base Animation Move</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

@@ -207,7 +207,7 @@ dispatch_once(&onceToken, ^{
 
 ```
 
-## UIView Transition
+## mksAnimationViewTransition
 ```
 // add transition in UIView
 UIViewAnimationTransition transition = <#transitionType#>;
@@ -222,7 +222,7 @@ UIViewAnimationTransition transition = <#transitionType#>;
 
 ```
 
-## CATransition
+## mksAnimationCATransition
 ```
 CATransition *transition = [CATransition animation];
 [transition setDelegate:<#CAAnimationDelegate#>];
@@ -241,7 +241,7 @@ transition.timingFunction = UIViewAnimationCurveEaseInOut;
 
 ```
 
-## CATransition Simple
+## mksAnimationCATransitionSimple
 ```
 CATransition *transition = [CATransition animation];
 [transition setDuration:1.0];
@@ -253,7 +253,7 @@ NSString *strSubType = kCATransitionFromTop;
 
 ```
 
-## Base Animation Alpha
+## mksBaseAnimationAlpha
 ```
 CABasicAnimation *alphaAnim = [CABasicAnimation animationWithKeyPath:@"alpha"];
 [alphaAnim setFromValue:[NSNumber numberWithFloat:<#alphaFrom#>]];
@@ -263,7 +263,7 @@ CABasicAnimation *alphaAnim = [CABasicAnimation animationWithKeyPath:@"alpha"];
 
 ```
 
-## Base Animation Move
+## mksBaseAnimationMove
 ```
 CABasicAnimation *moveAnim = [CABasicAnimation animationWithKeyPath:@"position"];
 [moveAnim setFromValue:[NSValue valueWithCGPoint:<#fromPoint#>]];
@@ -273,7 +273,7 @@ CABasicAnimation *moveAnim = [CABasicAnimation animationWithKeyPath:@"position"]
 
 ```
 
-## Base Animation Scale
+## mksBaseAnimationScale
 ```
 CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform"];
 [scaleAnim setFromValue:[NSValue valueWithCATransform3D:CATransform3DIdentity]];
@@ -284,7 +284,7 @@ CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform
 
 ```
 
-## Keyframe Animation Bezier
+## mksKeyframeAnimationBezier
 ```
 UIBezierPath *movePath = [UIBezierPath bezierPath];
 [movePath moveFrPoint:<#fromPoint#>];
@@ -297,7 +297,7 @@ keyframeAnim.removedOnCompletion = YES;
 
 ```
 
-## Animation Group
+## mksAnimationGroup
 ```
 CABasicAnimation *moveAnim = [CABasicAnimation animationWithKeyPath:@"position"];
 moveAnim.toValue = [NSValue valueWithCGPoint:<#toPoint#>];
